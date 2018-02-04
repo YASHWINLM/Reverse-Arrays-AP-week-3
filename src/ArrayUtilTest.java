@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class ArrayUtilTest {
 				           {12, 11, 10, 9}};
 		
 		Matrix mat1 = new Matrix(mat);
-		mat1.reverseAllRows();
+		mat1.reverseAllRows(mat);
 		
 		assertArrayEquals(testArr, mat1.getIntArray());
 	}
